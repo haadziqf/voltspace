@@ -1,78 +1,95 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen circuit-pattern">
       {/* Header/Navigation */}
-      <header className="fixed w-full bg-black/50 backdrop-blur-sm border-b border-gray-800">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+      <header className="fixed w-full bg-black/10 backdrop-blur-md border-b border-white/5">
+        <div className="container mx-auto px-4 py-4">
+          <nav className="flex items-center justify-between">
+            <span className="text-2xl font-light tracking-wider gradient-text">
               VOLTSPACE
             </span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <a href="#courses" className="hover:text-blue-400 transition">Power Circuits</a>
-            <a href="#community" className="hover:text-blue-400 transition">Grid Network</a>
-            <a href="#marketplace" className="hover:text-blue-400 transition">Circuit Exchange</a>
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#learn" className="text-sm hover-glow">Learn</a>
+              <a href="#community" className="text-sm hover-glow">Community</a>
+              <a href="#projects" className="text-sm hover-glow">Projects</a>
+              <button className="tech-button px-4 py-2 border border-white/10 rounded hover:border-primary/50">
+                Connect
+              </button>
+            </div>
           </nav>
-          <div>
-            <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition">
-              Connect
-            </button>
-          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <main className="pt-24">
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              Power Your Arduino Journey
+      <main className="relative pt-24">
+        <div className="container mx-auto px-4">
+          {/* Hero Content */}
+          <div className="max-w-4xl mx-auto text-center py-20 space-y-6 animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-light tracking-tight gradient-text">
+              Build the Future with Arduino
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Learn, collaborate, and innovate with the most electrifying Arduino learning platform
+            <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              Experience the most sophisticated Arduino learning platform. Design, build, and innovate with professional tools and community support.
             </p>
-            <div className="flex gap-4 justify-center">
-              <button className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-lg font-semibold transition">
+            <div className="flex flex-wrap gap-4 justify-center pt-8">
+              <button className="tech-button bg-primary/10 text-primary px-8 py-3 rounded-sm hover:bg-primary/20 transition-all">
                 Start Learning
               </button>
-              <button className="border border-blue-500 hover:bg-blue-500/10 px-6 py-3 rounded-lg text-lg font-semibold transition">
-                Explore Marketplace
+              <button className="tech-button border border-white/10 px-8 py-3 rounded-sm hover:border-primary/50 transition-all">
+                View Projects
               </button>
+            </div>
+          </div>
+
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-6 py-20">
+            {/* Card 1 */}
+            <div className="glass-card p-6 rounded-sm hover-glow group">
+              <div className="h-32 flex items-center justify-center text-primary/20 group-hover:text-primary/30 transition-colors">
+                {"</>"}
+              </div>
+              <h3 className="text-lg font-light mb-2 text-white/90">Learn &amp; Code</h3>
+              <p className="text-sm text-white/60">
+                Master Arduino programming with structured courses and hands-on projects.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="glass-card p-6 rounded-sm hover-glow group">
+              <div className="h-32 flex items-center justify-center text-primary/20 group-hover:text-primary/30 transition-colors">
+                {"{ }"}
+              </div>
+              <h3 className="text-lg font-light mb-2 text-white/90">Build &amp; Create</h3>
+              <p className="text-sm text-white/60">
+                Transform ideas into reality with our comprehensive building guides.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="glass-card p-6 rounded-sm hover-glow group">
+              <div className="h-32 flex items-center justify-center text-primary/20 group-hover:text-primary/30 transition-colors">
+                {"[]"}
+              </div>
+              <h3 className="text-lg font-light mb-2 text-white/90">Share &amp; Grow</h3>
+              <p className="text-sm text-white/60">
+                Join a community of makers and showcase your innovations.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Power Circuits</h3>
-              <p className="text-gray-300">
-                Structured learning paths from basics to advanced Arduino projects
-              </p>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Grid Network</h3>
-              <p className="text-gray-300">
-                Connect with fellow makers and share your knowledge
-              </p>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Circuit Exchange</h3>
-              <p className="text-gray-300">
-                Find or offer Arduino expertise in our marketplace
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* Tech Grid Background */}
+        <div className="tech-grid absolute inset-0 pointer-events-none"></div>
+        
+        {/* Data Stream Effect */}
+        <div className="data-stream absolute inset-0 pointer-events-none"></div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 py-8">
+      <footer className="border-t border-white/5 py-8 mt-20">
         <div className="container mx-auto px-4">
-          <div className="text-center text-gray-400">
-            <p>© 2025 VOLTSPACE. Amplifying Arduino Innovation.</p>
+          <div className="text-center text-white/40 text-sm">
+            <p>© 2025 VOLTSPACE. Innovate with precision.</p>
           </div>
         </div>
       </footer>
